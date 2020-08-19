@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TerrainMaterial
+  m_Name: MapleTerrain
   m_Shader: {fileID: 4800000, guid: 9cd781fc4e5e90b419e24d35b28d7673, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5

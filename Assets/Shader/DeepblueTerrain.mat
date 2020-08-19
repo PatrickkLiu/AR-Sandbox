@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TerrainMaterial
+  m_Name: DeepblueTerrain
   m_Shader: {fileID: 4800000, guid: 9cd781fc4e5e90b419e24d35b28d7673, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Grass:
-        m_Texture: {fileID: 2800000, guid: 85d238e4dfe88a24290130ad3ccacab0, type: 3}
+        m_Texture: {fileID: 2800000, guid: a59a61719d93c4a4a827c8280c58730a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -28,15 +28,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Rock:
-        m_Texture: {fileID: 2800000, guid: ea72b6f51bca70442a63a827657b1201, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e072f462d084b549b3307e5d28a3fb2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Sand:
-        m_Texture: {fileID: 2800000, guid: e8b0cf61d72e3fa4a8b0a39984734801, type: 3}
+        m_Texture: {fileID: 2800000, guid: ad2379dc7b1c1754da126269e3704f63, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Water:
-        m_Texture: {fileID: 2800000, guid: 0984fb40659fb3e4a94ef54cd2877608, type: 3}
+        m_Texture: {fileID: 2800000, guid: 09d5624ba8dcea044b7ec3e66a7bb2e4, type: 3}
         m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _Water1:
