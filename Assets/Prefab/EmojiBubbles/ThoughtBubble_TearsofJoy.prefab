@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 4556294876611731097}
   - component: {fileID: 8070760339572028778}
   m_Layer: 0
-  m_Name: ThoughtBubble_TearsofJoy Variant
+  m_Name: ThoughtBubble_TearsofJoy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
   smoothSpeed: 1.5
-  offset: {x: 18, y: 2, z: -26}
+  offset: {x: 15, y: 20, z: 0}
 --- !u!114 &8070760339572028778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,17 +315,17 @@ PrefabInstance:
     - target: {fileID: 1051015132039872924, guid: 94aa2987f3288794eadc22dc853d4c77,
         type: 3}
       propertyPath: offset.x
-      value: 18
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1051015132039872924, guid: 94aa2987f3288794eadc22dc853d4c77,
         type: 3}
       propertyPath: offset.y
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1051015132039872924, guid: 94aa2987f3288794eadc22dc853d4c77,
         type: 3}
       propertyPath: offset.z
-      value: -26
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94aa2987f3288794eadc22dc853d4c77, type: 3}

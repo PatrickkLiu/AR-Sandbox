@@ -577,7 +577,8 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: SKY_STUDIO_PRESENT
   platformArchitecture: {}
   scriptingBackend:
     Standalone: 0
