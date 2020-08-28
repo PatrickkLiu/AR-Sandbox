@@ -1,21 +1,19 @@
-﻿using SimpleJSON;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Net.Http;
+using SimpleJSON;
 
 public class CoordinateRequest : MonoBehaviour
 {
-    public Transform TestCube;
-
-    void Update()
+    void Start()
     {
-        //Link to our YOLO json website
-        StartCoroutine(GetRequest("http://127.0.0.1:5000/", "coordinate"));
+        // A correct website page.
+        StartCoroutine(GetRequest("127.0.0.1:5000"));
     }
 
-
-
-    IEnumerator GetRequest(string yoloURL,string toyName)
+    IEnumerator GetRequest(string yoloURL)
     {
         
         using (UnityWebRequest coordinateRequest = UnityWebRequest.Get(yoloURL))  
@@ -23,36 +21,18 @@ public class CoordinateRequest : MonoBehaviour
             // Request and wait for the desired page.
             yield return coordinateRequest.SendWebRequest();                  
 
-            // Return error if there's any
             if (coordinateRequest.isNetworkError || coordinateRequest.isHttpError)
             {
                 Debug.LogError(coordinateRequest.error);
                 yield break;
             }
 
-            // Print all coordinates
-            //Debug.Log(coordinateRequest.downloadHandler.text);
-
-
-            // Try to parse
             JSONNode coordinateInfo = JSON.Parse(coordinateRequest.downloadHandler.text);
-            JSONNode CoordX = coordinateInfo[0][toyName]["x"];
-            JSONNode CoordZ = coordinateInfo[0][toyName]["y"];
-            //print(CoordX);
-            TestCube.position = new Vector3 (CoordZ / 4 + 25F, -1.5f, CoordX / 6);
+            string coordinate = coordinateInfo["coordinate"];
+            Debug.Log(coordinate);
 
-            /*JSONNode CoordX = coordinateInfo[toyName]["x"];
-             *JSONNode CoordZ = coordinateInfo[toyName]["y"];
-             * 
-             * 
-             * 
-             */
         }
-
-
     }
-
-
 
 
 }
