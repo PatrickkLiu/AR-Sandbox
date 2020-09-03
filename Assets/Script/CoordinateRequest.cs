@@ -7,6 +7,7 @@ public class CoordinateRequest : MonoBehaviour
 {
     // #1 create tag list
     GameObject[] sandToys;
+    public Transform Plane;
 
     void Start()
     {       
@@ -14,18 +15,18 @@ public class CoordinateRequest : MonoBehaviour
         if (sandToys == null)
         sandToys = GameObject.FindGameObjectsWithTag("SandToy");
     }
-
+    
     void Update()
     {               
-        // #3 hook coroutine with our json url and target gameobjects
-        foreach (GameObject sandToy in sandToys)
-        {
-            StartCoroutine(GetRequest("http://127.0.0.1:5000/", sandToy.name, sandToy.transform));
-        }
-    }
+        // #3 hook coroutine with our json url
+        StartCoroutine(GetRequest("http://127.0.0.1:5000/")); //lesson learned: don't try to do 'foreach' every frame 
 
-    IEnumerator GetRequest(string yoloURL,string toyName, Transform toyTransform)
+    }
+    
+
+    IEnumerator GetRequest(string yoloURL)
     {
+        Debug.Log("Getting Request.");
         
         using (UnityWebRequest coordinateRequest = UnityWebRequest.Get(yoloURL))  
         {
@@ -44,25 +45,21 @@ public class CoordinateRequest : MonoBehaviour
 
             // #6 Parsing
             JSONNode coordinateInfo = JSON.Parse(coordinateRequest.downloadHandler.text);
-            JSONNode CoordX = coordinateInfo[toyName][0]["x"];
-            JSONNode CoordZ = coordinateInfo[toyName][0]["y"];
-            //print(CoordX);
+            
 
             // #7 Assign coordinate and Calibrate
-            toyTransform.position = new Vector3 (CoordZ / 4 + 25F, -1.5f, CoordX / 6);
+            foreach (GameObject sandToy in sandToys)
+            {
+                JSONNode CoordX = coordinateInfo[sandToy.name][0]["x"];
+                JSONNode CoordZ = coordinateInfo[sandToy.name][0]["y"]; 
 
-            /*JSONNode CoordX = coordinateInfo[toyName]["x"];
-             *JSONNode CoordZ = coordinateInfo[toyName]["y"];
-             * 
-             * 
-             * 
-             */
+                sandToy.transform.position = new Vector3 (CoordZ / 4 + 25F, -1.5f, CoordX / 6);
+            }
+
         }
 
 
     }
-
-
 
 
 }
