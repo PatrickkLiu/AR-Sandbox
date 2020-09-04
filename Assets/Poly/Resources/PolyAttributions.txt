@@ -1,0 +1,145 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: 3D scanned skull
+Author: Greg Dorsainville
+URL: https://poly.google.com/view/aaVtAHF_H2_
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: A seashell scanned with Qlone
+Author: Ronen Horovitz
+URL: https://poly.google.com/view/1RiCkz6UQU0
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Acoustic guitar
+Author: Poly by Google
+URL: https://poly.google.com/view/afr6GCpce_I
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Ankh2
+Author: bndkllr2
+URL: https://poly.google.com/view/3B6SfLzk2Gw
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Blimp
+Author: Poly by Google
+URL: https://poly.google.com/view/8sJEPmTfvA9
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Bone
+Author: Poly by Google
+URL: https://poly.google.com/view/fNEj4sHr1zk
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Campfire
+Author: Poly by Google
+URL: https://poly.google.com/view/c2yYarILOTs
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Castle
+Author: Poly by Google
+URL: https://poly.google.com/view/aeuJiuWdknv
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Crusader
+Author: Chris Page
+URL: https://poly.google.com/view/f8Xj2_8idBG
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Dinosaur
+Author: Poly by Google
+URL: https://poly.google.com/view/7GKj5zdc1RZ
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Drum
+Author: Poly by Google
+URL: https://poly.google.com/view/5Wp2emwd7xw
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Football stadium
+Author: Poly by Google
+URL: https://poly.google.com/view/6TZCkGh76m5
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Gate
+Author: Poly by Google
+URL: https://poly.google.com/view/711AlCsueib
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Goat Devil
+Author: Anonymous
+URL: https://poly.google.com/view/f5YYKuZ9qs2
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Lighthouse scene
+Author: Poly by Google
+URL: https://poly.google.com/view/1O6BWfUB6ta
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Long eared owl
+Author: Poly by Google
+URL: https://poly.google.com/view/dVPHzmMmXlg
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Mansion
+Author: Alex Gunderman
+URL: https://poly.google.com/view/d17D8Z9gXS0
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Quail
+Author: Poly by Google
+URL: https://poly.google.com/view/0Bde17Sy506
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Surprised Santa
+Author: Matt Connors
+URL: https://poly.google.com/view/3Q7goR4wcNE
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Table
+Author: Poly by Google
+URL: https://poly.google.com/view/fnTN9aw1q25
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: T-Rex
+Author: Poly by Google
+URL: https://poly.google.com/view/9GyZw9gGPMq
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: tropical fish c2
+Author: micah O
+URL: https://poly.google.com/view/8zek2rT-2X-
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: tropical fish c2
+Author: micah O
+URL: https://poly.google.com/view/fVPMB96mbM8
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Zombie
+Author: Jair Trejo
+URL: https://poly.google.com/view/4lQZlBjPbKV
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
