@@ -1,0 +1,11 @@
+1. Paste Circle Loader.cs to GAMEOBJECT you want to have a Circle loader
+2. Create CANVAS (Or use existing), Create Image and Child Image under the first Image. The First Image will be BACKGROUND, the second Loader.
+	You can skip Step 2 by using PREFAB Circle Loader within the Folder
+3. Paste Background you choose and Loader you want to Images. Remember that the Parent Image is always Background!
+4. Paste Animation you want, Create your Animation OR don´t animate it at all, your choice
+5. Move Circle Loader Image and Loader Image to Script empty collums named: CircleBackground (The first Image) and Loader (Second Image) to Loading Collumn
+6. Set Script variables within Unity Enviroment: Time Needed to open and What will open (What you want to open with Circle Loader).
+
+	--DONE--
+
+!! Object wich will call Circle Loader (Containing the Script) NEEDS to have Collider set as Trigger for script to work !!
