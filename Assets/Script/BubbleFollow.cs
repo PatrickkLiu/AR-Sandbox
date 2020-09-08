@@ -8,7 +8,7 @@ public class BubbleFollow : MonoBehaviour{
     public float smoothSpeed = 10f;
     public Vector3 offset;
 
-    void FixedUpdate()
+    void Update()
     {
         Vector3 desiredPosition = followTarget.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp (transform.position, desiredPosition, smoothSpeed*Time.deltaTime);

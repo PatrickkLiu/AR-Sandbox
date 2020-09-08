@@ -9,11 +9,17 @@ public class EmojiAssigner : MonoBehaviour
     public Camera assignCamera;
 
     private Transform emotionHolder;
+
+    public AudioSource audioData;
+
     
     void OnTriggerEnter (Collider other) 
     {
         if (other.CompareTag ("SandToy")) 
         {
+
+            audioData.Play(0);
+            
             //Access the emotionholder of the player by getting the "EmotionHolder" child of the colliding body's parent  
             emotionHolder = other.gameObject.transform.parent.GetChild(1);
             

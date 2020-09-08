@@ -16,7 +16,7 @@ public class CoordinateRequest : MonoBehaviour
         sandToys = GameObject.FindGameObjectsWithTag("SandToy");
     }
     
-    void Update()
+    void FixedUpdate()
     {               
         // #3 hook coroutine with our json url
         StartCoroutine(GetRequest("http://127.0.0.1:5000/")); //lesson learned: don't try to do 'foreach' every frame 
@@ -53,7 +53,7 @@ public class CoordinateRequest : MonoBehaviour
                 JSONNode CoordX = coordinateInfo[sandToy.name][0]["x"];
                 JSONNode CoordZ = coordinateInfo[sandToy.name][0]["y"]; 
 
-                sandToy.transform.position = new Vector3 (CoordZ / 4 + 25F, -1.5f, CoordX / 6);
+                sandToy.transform.parent.position = new Vector3 (CoordX / 20 - 20F, 0, CoordZ / 20);
             }
 
         }

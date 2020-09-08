@@ -5,5 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/DepthMesh.unity
+    guid: d163556308f4165488cf33440f93e4f2
+  - enabled: 1
+    path: Assets/Scene/Calibration.unity
+    guid: 72cf60694c9a3ea4b84868a9e3e4e9c3
+  m_configObjects: {}

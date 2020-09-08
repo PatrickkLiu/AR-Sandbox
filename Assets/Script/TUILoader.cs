@@ -1,14 +1,30 @@
 ﻿using System.Collections;
+using SimpleJSON;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Funly.SkyStudio;
+using UnityEngine.Networking;
 public class TUILoader : MonoBehaviour
 {
     public GameObject CircleBackground;
     public Image Loading;
     public TUIrequest TUIListener;
     public int CircelIndex;
+
+    public SkyProfile m_Profile;
+
+    public AudioSource camAudio;
+
+    //we define the skycontroller here so that it could be used under both of the function below 
+    public TimeOfDayController skycontroller;
+
+    /*void Start()
+    {
+        skycontroller = GetComponent<TimeOfDayController>();
+    }*/
+    
+ 
 
     private bool IsOpened = false;
     private bool CanClose = false;
@@ -18,7 +34,25 @@ public class TUILoader : MonoBehaviour
 
     public int TimeNeededToOpen=2;
 
-	void Update () {
+    IEnumerator GetRequest(string TUIURL)
+    {
+        Debug.Log("Getting Request.");
+        
+        using (UnityWebRequest TUIRequest = UnityWebRequest.Get(TUIURL))  
+        {
+            // #4 Request and wait for the desired page
+            yield return TUIRequest.SendWebRequest();                  
+
+            // #5 Return error if there's any
+            if (TUIRequest.isNetworkError || TUIRequest.isHttpError)
+            {
+                Debug.LogError(TUIRequest.error);
+                yield break;
+            }
+        }
+    }
+
+	void FixedUpdate () {
         
         Loading.fillAmount = timer / TimeNeededToOpen;
         if (IsOpened) Loading.fillAmount = 1;
@@ -30,12 +64,19 @@ public class TUILoader : MonoBehaviour
 
         if (timer >= TimeNeededToOpen)
         {
+            if (CircelIndex!=6) skycontroller.skyProfile = m_Profile;
             IsOpened = true;
             startTimer = false;
             timer = 0;
+            if (CircelIndex==6) {
+                // camAudio = GetComponent<AudioSource>();
+                camAudio.Play(0);
+                StartCoroutine(GetRequest("http://127.0.0.1:5000/Cap"));
+                Debug.Log("Caped");
+            }
         }
 
-        if (TUIListener.currentBox != CircelIndex)
+        if (TUIListener.currentBox != CircelIndex && !(CircelIndex==6 && TUIListener.cap))
         {
             startTimer = false;
             IsOpened = false;
@@ -43,7 +84,7 @@ public class TUILoader : MonoBehaviour
             CircleBackground.SetActive(false);
         }
 
-        if (TUIListener.currentBox == CircelIndex && IsOpened == false)
+        if ((TUIListener.currentBox == CircelIndex || (CircelIndex==6 && TUIListener.cap)) && IsOpened == false)
         {
             startTimer = true;
             CircleBackground.SetActive(true);

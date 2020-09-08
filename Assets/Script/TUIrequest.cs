@@ -6,16 +6,17 @@ using UnityEngine.Networking;
 public class TUIrequest : MonoBehaviour
 {
     public int currentBox=-1;
+    public bool cap=false;
     // Start is called before the first frame update
     void Start()
     {
         currentBox=-1;
     }
 
-    void Update()
+    void FixedUpdate()
     {               
         // #3 hook coroutine with our json url
-        StartCoroutine(GetRequest("http://127.0.0.1:5001/")); //lesson learned: don't try to do 'foreach' every frame 
+        StartCoroutine(GetRequest("http://127.0.0.1:5000/TUI")); //lesson learned: don't try to do 'foreach' every frame 
 
     }
     
@@ -41,8 +42,12 @@ public class TUIrequest : MonoBehaviour
 
             // #6 Parsing
             JSONNode TUIInfo = JSON.Parse(TUIRequest.downloadHandler.text);
-            currentBox = (int)TUIInfo[0];
-
+            currentBox = (int)TUIInfo[0]-1;
+            Debug.Log(((int)TUIInfo[0]).ToString());
+            cap = false;
+            if ((int)TUIInfo[1] == 7 || (int)TUIInfo[0] == 7) {
+                cap = true;
+            }
             // #7 Assign coordinate and Calibrate
 
 
