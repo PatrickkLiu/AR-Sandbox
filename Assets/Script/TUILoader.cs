@@ -15,17 +15,12 @@ public class TUILoader : MonoBehaviour
     public SkyProfile m_Profile;
 
     public AudioSource camAudio;
+    public AudioSource envAudio;
+    GameObject[] weatherAudios;
 
     //we define the skycontroller here so that it could be used under both of the function below 
     public TimeOfDayController skycontroller;
-
-    /*void Start()
-    {
-        skycontroller = GetComponent<TimeOfDayController>();
-    }*/
     
- 
-
     private bool IsOpened = false;
     private bool CanClose = false;
 
@@ -33,6 +28,15 @@ public class TUILoader : MonoBehaviour
     public bool startTimer;
 
     public int TimeNeededToOpen=2;
+
+
+    void Start()
+    {       
+        // #2 assign gameobjects to the list
+        if (weatherAudios == null)
+        weatherAudios = GameObject.FindGameObjectsWithTag("Sound");
+    }
+
 
     IEnumerator GetRequest(string TUIURL)
     {
@@ -64,16 +68,26 @@ public class TUILoader : MonoBehaviour
 
         if (timer >= TimeNeededToOpen)
         {
-            if (CircelIndex!=6) skycontroller.skyProfile = m_Profile;
+            if (CircelIndex!=6) {
+                skycontroller.skyProfile = m_Profile;
+                foreach (GameObject weatherAudio in weatherAudios) {
+                    AudioSource audio = weatherAudio.GetComponent<AudioSource>();
+                    if (audio != null) audio.Stop();
+                }
+                if (envAudio != null) envAudio.Play();
+            }     
+
             IsOpened = true;
             startTimer = false;
             timer = 0;
+
             if (CircelIndex==6) {
-                // camAudio = GetComponent<AudioSource>();
                 camAudio.Play(0);
                 StartCoroutine(GetRequest("http://127.0.0.1:5000/Cap"));
                 Debug.Log("Caped");
             }
+
+      
         }
 
         if (TUIListener.currentBox != CircelIndex && !(CircelIndex==6 && TUIListener.cap))

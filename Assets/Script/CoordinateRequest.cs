@@ -53,7 +53,7 @@ public class CoordinateRequest : MonoBehaviour
                 JSONNode CoordX = coordinateInfo[sandToy.name][0]["x"];
                 JSONNode CoordZ = coordinateInfo[sandToy.name][0]["y"]; 
 
-                sandToy.transform.parent.position = new Vector3 (CoordX / 20 - 20F, 0, CoordZ / 20);
+                sandToy.transform.parent.position = new Vector3 (CoordX / 20 - 20F, 0, CoordZ / 20 - 1f);
             }
 
         }
